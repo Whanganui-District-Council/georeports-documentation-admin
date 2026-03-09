@@ -3,11 +3,11 @@
 Create a new Map Layout as an A4 Portrait page…
 
   
-Launch the **Layout Manager** from the toolbar using the [![image.png](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/scaled-1680-/jy8image.png)](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/jy8image.png) tool  
+Launch the **Layout Manager** from the toolbar using the [![image.png](images/KaObzeDIodx5TDVsCgen.png)](images/KaObzeDIodx5TDVsCgen.png) tool  
 Click the **Create** button  
 Give the Layout a Title
 
-[![image.png](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/scaled-1680-/image.png)](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/image.png)
+[![image.png](images/F6dBWW2q0MwpjdhJWwn4.png)](images/F6dBWW2q0MwpjdhJWwn4.png)
 
 Click the **OK** button.
 

@@ -15,7 +15,7 @@ The home page URL at **https://yourdomain/georeports/** displays links to these 
 https://yourdomain/georeports/georeport?report=sample&featkey=14335
 ```
 
-[![image.png](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/scaled-1680-/yZPimage.png)](https://maps.whanganui.govt.nz/gis-technical-manual/uploads/images/gallery/2026-03/yZPimage.png)
+[![image.png](images/jgEtEUguMA6tuOBMpcQC.png)](images/jgEtEUguMA6tuOBMpcQC.png)
 
 #### Report using a direct stream
 
