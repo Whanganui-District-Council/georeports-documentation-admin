@@ -49,49 +49,104 @@ WHERE ST_Intersects(ST_Buffer(p.geom,-1),t.wkb_geometry) order by t.issue_date]]
       </DataTables>
 ```
 
-<div id="bkmrk--1"></div><div id="bkmrk--2"></div><div id="bkmrk--3"></div><div id="bkmrk--4"></div><div id="bkmrk--5"></div><div id="bkmrk--6"></div><div id="bkmrk--7"></div>## Definition
+---
 
-<div id="bkmrk--8"></div><div id="bkmrk--9"></div>#### &lt;DataTables&gt;
+## Definition
 
-<div id="bkmrk-xml-tag%3A-%3Cdatatables">XML Tag: **&lt;DataTables&gt;**</div><div id="bkmrk-occurrence%3A-once-onl">Occurrence: Once only, Optional</div><div id="bkmrk-parent%3A-%3Cpage%3E">Parent: **&lt;Page&gt;**</div><div id="bkmrk-description%3A-contain">Description: Container for Data Tables.</div><div id="bkmrk-%3Cdatatables%3E-1"></div><div id="bkmrk--10">  
-</div><div id="bkmrk--11"></div>#### &lt;OGCWFSDataTable&gt;
+#### &lt;DataTables&gt;
 
-<div id="bkmrk-xml-tag%3A-%3Cogcwfsdata"><div id="bkmrk-xml-tag%3A-%3Csqldatatab">XML Tag: **&lt;OGCWFSDataTable&gt;**</div><div id="bkmrk-occurrence%3A-multiple">Occurrence: Multiple allowed, Optional</div><div id="bkmrk-parent%3A-%3Cdatatables%3E">Parent: **&lt;DataTables&gt;**</div><div id="bkmrk-description%3A-data-ta">Description: Data table defined by OGC WFS Web Service.</div><div id="bkmrk-usage%3A-1">Usage:</div></div>```xml
+XML Tag: **&lt;DataTables&gt;**
+
+Occurrence: Once only, Optional
+
+Parent: **&lt;Page&gt;**
+
+Description: Container for Data Tables.
+
+---
+
+#### &lt;OGCWFSDataTable&gt;
+
+XML Tag: **&lt;OGCWFSDataTable&gt;**
+
+Occurrence: Multiple allowed, Optional
+
+Parent: **&lt;DataTables&gt;**
+
+Description: Data table defined by OGC WFS Web Service.
+
+Usage:
+```xml
 <OGCWFSDataTable caption="Interests - Current" nodata="No Information available" description="Further information is available at https://data.linz.govt.nz/table/51695-nz-title-memorials-list-including-mortgages-leases-easements/">
 ```
 
-<div id="bkmrk-attributes%3A-caption-"><div id="bkmrk-attributes%3A">Attributes:</div>- **caption** Caption text for the data table
+Attributes:
+- **caption** Caption text for the data table
 - **nodata** Text to display if no data returned
 - **description** Description text for the data table
 
+---
+
 </div>#### &lt;URI&gt;
 
-<div id="bkmrk-xml-tag%3A-%3Curi%3E-occur"><div id="bkmrk-xml-tag%3A-%3Csql%3E">XML Tag: **&lt;URI&gt;**</div><div id="bkmrk-occurrence%3A-once-onl-1">Occurrence: Once only</div><div id="bkmrk-parent%3A-%3Csqldatatabl">Parent: **&lt;OGCWFSDataTable&gt;**</div><div id="bkmrk-description%3A-sql-sta">Description: SQL statement returning data.</div><div id="bkmrk-usage%3A-2">Usage:</div></div>```xml
+XML Tag: **&lt;URI&gt;**
+
+Occurrence: Once only
+
+Parent: **&lt;OGCWFSDataTable&gt;**
+
+Description: SQL statement returning data.
+Usage:
+```xml
 <URI colwidths="53,27,20">
 <![CDATA[https://data.linz.govt.nz/services;key=key/wfs?service=WFS&version=1.0.0&request=GetFeature&typeNames=table-51695&propertyName=memorial_text,instrument_lodged_datetime,instrument_type&cql_filter=current=true%20AND%20title_no=@featurekey]]>
 </URI>
 ```
 
-<div id="bkmrk-attributes%3A-colwidth"><div id="bkmrk-attributes%3A-1">Attributes:</div>- **colwidths** comma delimited list of percentage values for column widths (must add up to 100, if not column widths will be sized equally)
+Attributes:
+- **colwidths** comma delimited list of percentage values for column widths (must add up to 100, if not column widths will be sized equally)
 
-<div id="bkmrk-parameters%3A-%40feature">Parameters: </div>- **@featurekey** Replaced with Feature key value from launch URL
+Parameters: 
+- **@featurekey** Replaced with Feature key value from launch URL
 - **@databasekey** Replaced with Database key value from launch URL
 - **@referencekey** Replaced with Reference key value from launch URL
 
-<div id="bkmrk--17"></div>  
-</div><div id="bkmrk--12"></div><div id="bkmrk--13"></div><div id="bkmrk--14"></div>#### &lt;SQLDataTable&gt;
+---
 
-<div id="bkmrk-xml-tag%3A-%3Csqldatatab-1">XML Tag: **&lt;SQLDataTable&gt;**</div><div id="bkmrk-occurrence%3A-multiple-1">Occurrence: Multiple allowed, Optional</div><div id="bkmrk-parent%3A-%3Cdatatables%3E-1">Parent: **&lt;DataTables&gt;**</div><div id="bkmrk-description%3A-data-ta-1">Description: Data table defined by SQL Statement.</div><div id="bkmrk-usage%3A">Usage:</div>```xml
+#### &lt;SQLDataTable&gt;
+
+XML Tag: **&lt;SQLDataTable&gt;**
+
+Occurrence: Multiple allowed, Optional
+
+Parent: **&lt;DataTables&gt;**
+
+Description: Data table defined by SQL Statement.
+
+Usage:
+```xml
 <SQLDataTable caption="LINZ Primary Land Parcel Information" nodata="No Information available" description="PostGIS Test">
 ```
 
-<div id="bkmrk-attributes%3A-2">Attributes:</div>- **caption** Caption text for the data table
+Attributes:
+- **caption** Caption text for the data table
 - **nodata** Text to display if no data returned
 - **description** Description text for the data table
 
+---
+
 #### &lt;SQL&gt;
 
-<div id="bkmrk-xml-tag%3A-%3Csql%3E-1">XML Tag: **&lt;SQL&gt;**</div><div id="bkmrk-occurrence%3A-once-onl-2">Occurrence: Once only</div><div id="bkmrk-parent%3A-%3Csqldatatabl-1">Parent: **&lt;SQLDataTable&gt;**</div><div id="bkmrk-description%3A-sql-sta-1">Description: SQL statement returning data.</div><div id="bkmrk-usage%3A-3">Usage:</div>```xml
+XML Tag: **&lt;SQL&gt;**
+
+Occurrence: Once only
+
+Parent: **&lt;SQLDataTable&gt;**
+
+Description: SQL statement returning data.
+
+Usage:
+```xml
 <SQL connection="pgLINZodbc" colwidths="20,80">
 <![CDATA[
 SELECT id,appellation FROM lds.nz_primary_land_parcels WHERE id=@featurekey
@@ -99,12 +154,11 @@ SELECT id,appellation FROM lds.nz_primary_land_parcels WHERE id=@featurekey
 </SQL>
 ```
 
-<div id="bkmrk--16"></div><div id="bkmrk-attributes%3A-3">Attributes:</div>- **connection** Name of the SQL Connection to use (as defined in web.config)
+Attributes:
+- **connection** Name of the SQL Connection to use (as defined in web.config)
 - **colwidths** comma delimited list of percentage values for column widths (must add up to 100, if not column widths will be sized equally)
 
-<div id="bkmrk-parameters%3A%C2%A0">Parameters: </div>- **@featurekey** Replaced with Feature key value from launch URL
+Parameters: 
+- **@featurekey** Replaced with Feature key value from launch URL
 - **@databasekey** Replaced with Database key value from launch URL
 - **@referencekey** Replaced with Reference key value from launch URL
-
-<div id="bkmrk--18">  
-</div><div id="bkmrk--19"></div>
