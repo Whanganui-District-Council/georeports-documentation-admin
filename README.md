@@ -1,4 +1,4 @@
-# GeoReports
+# GeoReports Administrator Manual
 
 ![GeoReports](georeports_logo.svg)
 
@@ -20,25 +20,5 @@ One or more Templates (QGIS QPT Layout Temlates) referenced by the config file d
 Third party PDF documents can be inserted at any point either as defined pages, page ranges or an entire PDF document.
 
 ![Application Flow](georeports_application_flow.png)
-
-# Installation
-
-Requirements:
-* Maven
-* JDK 17
-* Docker
-
-
-Basics:
-```
-cd georeports
-
-mvn clean compile package -f pom.xml
-
-docker compose build
-
-docker compose -f docker-compose.yml -p georeports up -d
-```
-
 
 
