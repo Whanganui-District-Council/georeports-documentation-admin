@@ -32,17 +32,24 @@ Draw Legend Images from WMS Web Service
 
 #### &lt;FloatingImages&gt;
 
-XML Tag: **&lt;FloatingImages&gt;**  
-Occurrence: Once only, Optional  
-Parent: **&lt;Page&gt;**  
+XML Tag: **&lt;FloatingImages&gt;**
+
+Occurrence: Once only, Optional
+
+Parent: **&lt;Page&gt;**
+
 Description: Container for Floating Images.
 
-####   
-&lt;FloatingImage&gt;
+---
 
-XML Tag: **&lt;FloatingImage&gt;**  
-Occurrence: Multiple Allowed, Optional  
-Parent: **&lt;FloatingImages&gt;**  
+#### &lt;FloatingImage&gt;
+
+XML Tag: **&lt;FloatingImage&gt;**
+
+Occurrence: Multiple Allowed, Optional
+
+Parent: **&lt;FloatingImages&gt;**
+
 Description: Include an image on the page determined by type, position and multiplier to scale image
 
 Usage (URI):
@@ -65,12 +72,16 @@ Attributes:
 - **type** one of FILE or URI
 - **file** If type=”FILE”, the local path and filename to the image
 
-####   
-&lt;URI&gt;
+---
 
-XML Tag: **&lt;URI&gt;**  
-Occurrence: Once only, Required  
-Parent: **&lt;FloatingImage&gt;**  
+#### &lt;URI&gt;
+
+XML Tag: **&lt;URI&gt;**
+
+Occurrence: Once only, Required
+
+Parent: **&lt;FloatingImage&gt;**
+
 Description: URI to the web service supplying the floating image.
 
 Usage:
