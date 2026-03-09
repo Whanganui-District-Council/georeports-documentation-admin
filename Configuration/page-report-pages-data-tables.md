@@ -97,6 +97,7 @@ Parent: **&lt;OGCWFSDataTable&gt;**
 
 Description: SQL statement returning data.
 Usage:
+
 ```xml
 <URI colwidths="53,27,20">
 <![CDATA[https://data.linz.govt.nz/services;key=key/wfs?service=WFS&version=1.0.0&request=GetFeature&typeNames=table-51695&propertyName=memorial_text,instrument_lodged_datetime,instrument_type&cql_filter=current=true%20AND%20title_no=@featurekey]]>
@@ -124,6 +125,7 @@ Parent: **&lt;DataTables&gt;**
 Description: Data table defined by SQL Statement.
 
 Usage:
+
 ```xml
 <SQLDataTable caption="LINZ Primary Land Parcel Information" nodata="No Information available" description="PostGIS Test">
 ```
@@ -146,6 +148,7 @@ Parent: **&lt;SQLDataTable&gt;**
 Description: SQL statement returning data.
 
 Usage:
+
 ```xml
 <SQL connection="pgLINZodbc" colwidths="20,80">
 <![CDATA[
