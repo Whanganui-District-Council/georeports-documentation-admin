@@ -40,53 +40,88 @@
 </MapImage>
 ```
 
-<div id="bkmrk--1"></div><div id="bkmrk--2"></div>## Definition
+## Definition
 
-<div id="bkmrk--3">  
-</div>#### &lt;MapImage&gt;
+#### &lt;MapImage&gt;
 
-<div id="bkmrk-xml-tag%3A-%3Cmapimage%3E">XML Tag: **&lt;MapImage&gt;**</div><div id="bkmrk-occurrence%3A-multiple">Occurrence: Multiple Allowed, Optional</div><div id="bkmrk-parent%3A-%3Cpage%3E">Parent: **&lt;Page&gt;**</div><div id="bkmrk-description%3A-include">Description: Include a map image on the page.</div>```xml
+XML Tag: **&lt;MapImage&gt;**
+
+Occurrence: Multiple Allowed, Optional
+
+Parent: **&lt;Page&gt;**
+
+Description: Include a map image on the page.
+
+```xml
 <MapImage imageScale="2" type="OGCWMS">
 ```
 
-<div id="bkmrk--4"></div><div id="bkmrk-attributes%3A">Attributes:</div>- **imageScale** value to scale the image size by
+Attributes:
+- **imageScale** value to scale the image size by
 - **type** one of **OGCWMS** or **ESRIREST** or **ESRIRESTMAPSERVER** or **INTRAMAPS**
 
-<div id="bkmrk--5">  
-</div><div id="bkmrk--6">  
-</div>#### &lt;URI&gt;
+---
 
-<div id="bkmrk-xml-tag%3A-%3Curi%3E">XML Tag: **&lt;URI&gt;**</div><div id="bkmrk-occurrence%3A-once-onl">Occurrence: Once only, Required</div><div id="bkmrk-parent%3A-%3Cmapimage%3E">Parent: **&lt;MapImage&gt;**</div><div id="bkmrk-description%3A-uri-to-">Description: URI to the web service supplying the map image.</div><div id="bkmrk-usage%3A-1">Usage:</div><div id="bkmrk-ogcwms">**OGCWMS**</div>```xml
+#### &lt;URI&gt;
+
+XML Tag: **&lt;URI&gt;**
+
+Occurrence: Once only, Required
+
+Parent: **&lt;MapImage&gt;**
+
+Description: URI to the web service supplying the map image.
+
+Usage:
+**OGCWMS**
+```xml
 <URI useProxy="False"><![CDATA[https://data.linz.govt.nz/services;key=dd4308b96a1743a195b4e9044fb70313/wms?service=WMS&version=1.1.1&request=GetMap&layers=layer-50767&format=image/png&srs=EPSG:2193]]></URI>
 ```
 
-<div id="bkmrk-exclude-these-parame">Exclude these parameters from the URI:</div>- &amp;bbox
+Exclude these parameters from the URI:
+- &amp;bbox
 - &amp;width
 - &amp;height
 
-<div id="bkmrk-usage%3A-2">Usage:</div><div id="bkmrk-esrirest-experimenta">**ESRIREST <span style="color: rgb(224, 62, 45);">*EXPERIMENTAL*</span>**</div><div id="bkmrk-use-esri-rest-images">use ESRI REST ImageServer service for map image (Export Image URL)</div>```xml
+Usage:
+
+**ESRIREST <span style="color: rgb(224, 62, 45);">*EXPERIMENTAL*</span>**
+
+use ESRI REST ImageServer service for map image (Export Image URL)
+```xml
 <URI useProxy="False"><![CDATA[https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Imagery/Hastings_Urban_Imagery_20142015/ImageServer/exportImage?bboxSR=2193&imageSR=&time=&format=jpgpng&pixelType=U8&noData=&noDataInterpretation=esriNoDataMatchAny&interpolation=+RSP_BilinearInterpolation&compression=&compressionQuality=&bandIds=&mosaicRule=&renderingRule=&f=image]]></URI>
 ```
 
-<div id="bkmrk-exclude-these-parame-1">Exclude these parameters from the URI:</div>- &amp;bbox
+
+Exclude these parameters from the URI:
+- &amp;bbox
 - &amp;size
 
-<div id="bkmrk-usage%3A-3">Usage:</div><div id="bkmrk-esrirestmapserver-ex">**ESRIRESTMAPSERVER** <span style="color: rgb(224, 62, 45);">***EXPERIMENTAL***</span></div><div id="bkmrk-use-esri-rest-mapser">Use ESRI REST MapServer service for map image (Export Map URL)</div><div id="bkmrk--7">  
-</div><div id="bkmrk-usage%3A-4">Usage:</div><div id="bkmrk-intramaps">**INTRAMAPS**</div>```xml
+
+Usage:
+
+**ESRIRESTMAPSERVER** <span style="color: rgb(224, 62, 45);">***EXPERIMENTAL***</span>
+
+Use ESRI REST MapServer service for map image (Export Map URL)
+
+Usage:
+
+**INTRAMAPS**
+
+```xml
 <URI useProxy="False"><![CDATA[https://mapping.hdc.govt.nz/IntraMaps80/SpatialEngineWSEmbeddedMaps/getmap.ashx?Project=PropertyMaps&Module=Property&layer=Property%20Data&includeData=false&mapkeys=@datbasekey]]></URI>
 ```
 
-<div id="bkmrk-exclude-these-parame-2">Exclude these parameters from the URI:</div>- &amp;width
+
+Exclude these parameters from the URI:
+- &amp;width
 - &amp;height
 - &amp;zoom
 - &amp;x
 - &amp;y
 
-<div id="bkmrk-useproxy-not-impleme"></div><div id="bkmrk--9">  
-</div><div id="bkmrk-parameters%3A-%40feature">Parameters:</div>- **@featurekey** Replaced with Feature key value from launch URL
+
+Parameters:
+- **@featurekey** Replaced with Feature key value from launch URL
 - **@databasekey** Replaced with Database key value from launch URL
 - **@referencekey** Replaced with Reference key value from launch URL
-
-<div id="bkmrk--10">  
-</div><div id="bkmrk--11">  
-</div><div id="bkmrk--12"></div>
